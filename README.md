@@ -5,8 +5,8 @@ Thème VS Code chaud et artisanal, dérivé directement des tokens du portfolio 
 
 Deux variantes :
 
-- **Ariane — Crème** (clair) — atmosphère papier, accent terracotta, ponctuation bourgogne pour les mots-clés.
-- **Ariane — Charbon** (sombre) — surface `--color-dark` du portfolio (#2a2018) avec accents terracotta éclaircis et moutarde pour les chaînes/valeurs.
+- **Ariane — Crème** (clair) — fond cream `#f5efe4`, terracotta deep `#9b4528` pour les éléments structurels, bourgogne `#7a1f3d` pour les mots-clés. Atmosphère papier/ink, grounded.
+- **Ariane — Charbon** (sombre) — fond cream-dark `#1c1510` (le `--color-cream` remappé du portfolio), terracotta `#d4754f`, moutarde `#dba636` pour la lumière du fichier, rose-magenta `#c2466a` (équivalent perceptuel du bourgogne, voir G13 du DESIGN.md) pour les mots-clés. Atmosphère lueur chaude nocturne.
 
 ## Philosophie
 
@@ -27,17 +27,21 @@ Moutarde et bourgogne ne cohabitent pas dans la même variante — la sémantiqu
 
 | Élément | Clair | Sombre |
 |---|---|---|
-| Commentaires | `#8a7560` italique | `#ead9d477` italique |
-| Mots-clés (control) | bourgogne `#7a1f3d` | rose `#e8909f` |
-| Storage (`const`, `class`) | terra-deep `#9b4528` | terra `#e07a5a` |
-| Chaînes | terra-deep `#9b4528` | moutarde `#e8c267` |
-| Nombres | terra-deep `#9b4528` | moutarde `#e8c267` |
+| Fond éditeur | cream `#f5efe4` | cream-dark `#1c1510` |
+| Sidebar / panel | paper-warm `#f1e8d8` / paper `#faf6ed` | cream-deep dark `#161210` |
+| Status bar | ink `#2a2018` | dark `#0f0c08` |
+| Commentaires | `#8a7560` italique | `#ead9d466` italique |
+| Mots-clés (control) | bourgogne `#7a1f3d` | rose `#c2466a` |
+| Storage (`const`, `class`) | terra-deep `#9b4528` | terra `#d4754f` |
+| Chaînes | terra-deep `#9b4528` | moutarde `#dba636` |
+| Nombres | terra-deep `#9b4528` | moutarde `#dba636` |
 | Fonctions (déf.) | ink `#2a2018` bold | dark-fg `#ead9d4` bold |
-| Fonctions (appel) | terra-deep `#9b4528` | moutarde `#e8c267` |
-| Types / classes | ink-soft `#4a3d31` bold | beige-rosé `#c8b3ab` bold |
+| Fonctions (appel) | terra-deep `#9b4528` | moutarde `#dba636` |
+| Types / classes | ink-soft `#4a3d31` bold | ink-soft dark `#c8b5ae` bold |
 | Variables | ink `#2a2018` | dark-fg `#ead9d4` |
-| Tags JSX/HTML | terra-deep `#9b4528` | terra `#e07a5a` |
-| Attributs HTML | bourgogne `#7a1f3d` italique | moutarde `#e8c267` italique |
+| Tags JSX/HTML | terra-deep `#9b4528` | terra `#d4754f` |
+| Attributs HTML | bourgogne `#7a1f3d` italique | moutarde `#dba636` italique |
+| Curseur | terra `#c96442` | moutarde `#dba636` |
 
 ## Installation locale
 
@@ -61,9 +65,9 @@ npx @vscode/vsce package
 
 ## Règles respectées du DESIGN.md portfolio
 
-- Aucune valeur hex en dehors des tokens du site (les valeurs `#e07a5a`, `#e8c267`, `#e8909f`, `#c8b3ab` du thème sombre sont les équivalents perceptuels — voir G13 du portfolio AGENTS.md, "même fonction sémantique, pas même couleur").
-- Moutarde et bourgogne ne cohabitent jamais dans la même variante.
-- Contraste AA respecté : `#9b4528` (terra-deep) sur `#f5efe4` (cream) = 4.6:1 pour le texte de code.
+- Toutes les valeurs hex viennent directement de `tokens.css` du portfolio (light et dark sections). Le mapping dark suit la règle G13 du DESIGN.md : "même fonction sémantique, pas même couleur".
+- Mappings dark exactement alignés avec `@media (prefers-color-scheme: dark)` du portfolio : cream `#1c1510`, paper `#221b14`, dark `#0f0c08`, terra `#d4754f`, bourgogne→rose `#c2466a`. La moutarde n'est pas remappée en dark dans le portfolio, donc `#dba636` est conservée.
+- Contraste AA respecté : `#9b4528` (terra-deep) sur `#f5efe4` (cream) = 4.6:1 pour le texte de code. En clair, `#c96442` (terra) reste réservée aux éléments décoratifs/UI larges (G11 du DESIGN.md).
 - Le curseur clignote sur terracotta (clair) ou moutarde (sombre) — même geste que le `@keyframes blink` du site.
 
 ## Licence
