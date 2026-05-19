@@ -1,0 +1,32 @@
+{
+  "name": "ariane-guay-theme",
+  "displayName": "Portfolio Ariane Guay — Theme",
+  "description": "Thème VS Code chaud et artisanal, basé sur le portfolio d'Ariane Guay. Palette terracotta, crème et charbon chaud.",
+  "version": "0.1.0",
+  "publisher": "arianeguay",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Themes"],
+  "keywords": ["warm", "terracotta", "cream", "artisanal", "ariane guay"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Portfolio AG — Crème",
+        "uiTheme": "vs",
+        "path": "./themes/cream-color-theme.json"
+      },
+      {
+        "label": "Portfolio AG — Charbon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/charbon-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arianeguay/vscode-theme.git",
+    "directory": "vscode-theme"
+  },
+  "license": "MIT"
+}
