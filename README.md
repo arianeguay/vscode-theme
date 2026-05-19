@@ -1,4 +1,4 @@
-# Ariane Guay — Atelier
+# Portfolio Ariane Guay — Theme
 
 Thème VS Code chaud et artisanal, dérivé directement des tokens du portfolio d'[Ariane Guay](https://arianeguay.com). Palette terracotta · crème · charbon chaud, jamais clinique.
 
